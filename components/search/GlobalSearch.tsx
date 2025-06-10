@@ -5,7 +5,8 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 
 import { Input } from "@/components/ui/input";
-import { formUrlQuery, removeKeysFromQuery } from "@/lib/url";
+
+import { formUrlQuery, removeKeysFromUrlQuery } from "@/lib/url";
 
 import GlobalResult from "../GlobalResult";
 
@@ -51,7 +52,11 @@ const GlobalSearch = () => {
         router.push(newUrl, { scroll: false });
       } else {
         if (query) {
+<<<<<<< HEAD
           const newUrl = removeKeysFromQuery({
+=======
+          const newUrl = removeKeysFromUrlQuery({
+>>>>>>> 22efaff5f35920de0e4778d36d2fc20d70f04296
             params: searchParams.toString(),
             keysToRemove: ["global", "type"],
           });

@@ -124,8 +124,13 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
+<<<<<<< HEAD
 git clone https://github.com/JavaScript-Mastery-Pro/devflow-v2-record.git
 cd devflow-v2-record
+=======
+git clone https://github.com/JavaScript-Mastery-Pro/jsmasterypro_devflow.git
+cd jsmasterypro_devflow
+>>>>>>> 22efaff5f35920de0e4778d36d2fc20d70f04296
 ```
 
 **Installation**
