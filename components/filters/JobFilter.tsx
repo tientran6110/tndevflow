@@ -19,7 +19,7 @@ interface JobsFilterProps {
   countriesList: Country[];
 }
 
-const JobsFilter = ({ countriesList }: JobsFilterProps) => {
+const JobsFilter = ({ countriesList = [] }: JobsFilterProps) => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -59,7 +59,7 @@ const JobsFilter = ({ countriesList }: JobsFilterProps) => {
 
         <SelectContent className="body-semibold max-h-[350px] max-w-[250px]">
           <SelectGroup>
-            {countriesList ? (
+            {Array.isArray(countriesList) && countriesList.length > 0 ? (
               countriesList.map((country: Country) => (
                 <SelectItem
                   key={country.name.common}
